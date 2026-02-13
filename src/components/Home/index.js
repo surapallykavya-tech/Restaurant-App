@@ -112,8 +112,8 @@ class Home extends Component {
           onClick={onClickHandler}
         >
           <button
-            type="button"
-            className="mt-0 mb-0 ms-2 me-2 tab-category-button"
+            type='button'
+            className='mt-0 mb-0 ms-2 me-2 tab-category-button'
           >
             {eachCategory.menuCategory}
           </button>
@@ -132,7 +132,7 @@ class Home extends Component {
     const {categoryDishes} = activeCategory
 
     return (
-      <ul className="m-0 d-flex flex-column dishes-list-container">
+      <ul className='m-0 d-flex flex-column dishes-list-container'>
         {categoryDishes.map(eachDish => (
           <DishItem
             key={eachDish.dishId}
@@ -147,8 +147,8 @@ class Home extends Component {
   }
 
   renderSpinner = () => (
-    <div className="spinner-container">
-      <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
+    <div className='spinner-container'>
+      <Loader type='TailSpin' color='#00BFFF' height={50} width={50} />
     </div>
   )
 
@@ -158,9 +158,9 @@ class Home extends Component {
     return isLoading ? (
       this.renderSpinner()
     ) : (
-      <div className="home-background">
+      <div className='home-background'>
         <Header cartItems={cartItems} />
-        <ul className="m-0 ps-0 d-flex tab-container">
+        <ul className='m-0 ps-0 d-flex tab-container'>
           {this.renderTabMenuList()}
         </ul>
         {this.renderDishes()}
